@@ -1,0 +1,58 @@
+# Como executar um arquivo `.sh` e um código Python
+
+## 1. Como executar um arquivo `.sh`
+
+Para executar um arquivo `.sh` (script shell) no Linux ou macOS, siga os passos abaixo:
+
+1. **Abra o terminal**.
+2. **Navegue até o diretório** onde o arquivo `.sh` está localizado.
+   - Use o comando `cd`, por exemplo:
+     ```bash
+     cd /caminho/do/diretorio
+     ```
+3. **Torne o arquivo executável**:
+   - Execute o comando:
+     ```bash
+     chmod +x nome_do_arquivo.sh
+     ```
+4. **Execute o script**:
+   - Para rodar o script, use o seguinte comando:
+     ```bash
+     ./nome_do_arquivo.sh
+     ```
+
+## 2. Como executar o código Python fornecido
+
+O código Python abaixo realiza cálculos simples, como soma, subtração, multiplicação e divisão. Siga as etapas para executá-lo:
+
+1. **Salve o código em um arquivo**:
+   - Copie o código e cole em um arquivo chamado, por exemplo, `calculadora.py`.
+
+2. **Abra o terminal ou prompt de comando**:
+   - Navegue até o diretório onde o arquivo está salvo.
+
+3. **Execute o script Python**:
+   - Caso o Python já esteja instalado no seu sistema, execute o seguinte comando:
+     ```bash
+     python3 calculadora.py
+     ```
+
+### Código Python:
+```python
+def calcular(num1, num2, operacao):
+    if operacao == '+':
+        return num1 + num2
+    elif operacao == '-':
+        return num1 - num2
+    elif operacao == '*':
+        return num1 * num2
+    elif operacao == '/':
+        if num2 != 0:
+            return num1 / num2
+
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+operacao = input("Digite a operação: (+ para somar, - para subtrair, * para multiplicar, / para dividir): ")
+
+resultado = calcular(num1, num2, operacao)
+print("Resultado:", resultado)
